@@ -11,12 +11,9 @@ module SfData
     end
     
     def self.all
-      foodtrucks_array = Unirest.get("https://data.sfgov.org/resource/bbb8-hzi6.json").body
-      create_foodtrucks(foodtrucks_array)
+      Unirest.get("https://data.sfgov.org/resource/bbb8-hzi6.json").body
     end
 
-    def self.create_foodtrucks(foodtrucks_array)
-      # create ruby objects
-    end
+
   end
 end
